@@ -7,6 +7,7 @@ import { LidModule } from "./lid/lid.module";
 import { BranchModule } from "./branch/branch.module";
 import { RoleModule } from './role/role.module';
 import { AuthModule } from './auth/auth.module';
+import { StaffModule } from './staff/staff.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ envFilePath: ".env", isGlobal: true }),
@@ -17,6 +18,7 @@ import { AuthModule } from './auth/auth.module';
     BranchModule,
     RoleModule,
     AuthModule,
+    StaffModule,
   ],
 })
 export class AppModule {}

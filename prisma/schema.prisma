@@ -71,8 +71,19 @@ model Staff {
   phone_number         String
   login                String   @unique
   hashed_password      String
+
   is_active            Boolean? @default(false)
   hashed_refresh_token String?
 
+  // roles                 StaffRole[]
   @@map("staff")
 }
+
+// model StaffRole {
+//   staff   Staff @relation(fields: [staffId], references: [id])
+//   staffId Int
+  
+
+//   @@id([staffId ]) 
+//   @@map("staff_role") 
+// }
