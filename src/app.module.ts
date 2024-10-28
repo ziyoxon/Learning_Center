@@ -8,6 +8,10 @@ import { BranchModule } from "./branch/branch.module";
 import { RoleModule } from './role/role.module';
 import { AuthModule } from './auth/auth.module';
 import { StaffModule } from './staff/staff.module';
+import { GroupModule } from './group/group.module';
+import { StudentModule } from './student/student.module';
+import { PaymentModule } from './payment/payment.module';
+import { LessonModule } from './lesson/lesson.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ envFilePath: ".env", isGlobal: true }),
@@ -19,6 +23,10 @@ import { StaffModule } from './staff/staff.module';
     RoleModule,
     AuthModule,
     StaffModule,
+    GroupModule,
+    StudentModule,
+    PaymentModule,
+    LessonModule,
   ],
 })
 export class AppModule {}

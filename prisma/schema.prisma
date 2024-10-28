@@ -79,6 +79,54 @@ model Staff {
   @@map("staff")
 }
 
+
+model Group {
+  id       Int    @id @default(autoincrement())
+  name     String
+  lesson_start_time String
+  lesson_end_time String
+  lesson_week_day String
+  room_number  Int
+  room_floor Int
+  lesson_quant Int
+  is_active Boolean
+
+  @@map("group")
+}
+
+model Student {
+  id                   Int      @id @default(autoincrement())
+  first_name           String
+  last_name            String
+  phone_number         String
+  birthday              String 
+  gender                 String
+  is_active            Boolean? @default(false)
+  @@map("student")
+
+}
+
+model Payment{
+  id                Int        @id @default(autoincrement())
+  payment_last_date         String
+  payment_date      String
+  price Int
+  is_paid Boolean
+  total_amount Int
+  
+
+  @@map("payment")
+}
+
+model Lesson{
+  id                Int        @id @default(autoincrement())
+  lesson_date         String
+  lesson_time      String
+  lesson_theme String
+  lesson_number Int
+  is_finished Boolean
+}
+
 // model StaffRole {
 //   staff   Staff @relation(fields: [staffId], references: [id])
 //   staffId Int
